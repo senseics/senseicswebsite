@@ -1,0 +1,89 @@
+html {
+    height: auto;
+    width: 100vw;
+}
+
+body {
+    background-color: rgba(50,50,50,0.92);
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+#bg {
+    opacity: 0.6;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-image: url('assets/diff_circuit.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#nav {
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+}
+
+#logo {
+    height: 40px;
+    width: 100%;
+    background-image: url('assets/senseics_logo.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+#view {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px;
+    scroll-snap-type: y mandatory;
+    width: 100%;
+}
+
+.page {
+    margin: 0px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+.pic {
+
+}
+
+.page p {
+    margin: 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    height: 90%;
+    width: 90%;
+    margin-bottom: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba(50,50,50,0.92);
+}
+
+#about {
+    justify-content: flex-end;
+}
+
+#about p {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
