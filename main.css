@@ -33,7 +33,7 @@ body {
 }
 
 #logo {
-    height: 40px;
+    height: 30px;
     width: 100%;
     background-image: url('assets/senseics_logo.svg');
     background-repeat: no-repeat;
@@ -44,7 +44,7 @@ body {
 #menu-button {
     color: white;
     margin: 20px;
-    font-size: 1.8em;
+    font-size: 1.5em;
     position: fixed;
     z-index: 2;
     display: flex;
@@ -53,9 +53,10 @@ body {
 }
 
 #menu {
+    margin-top: 5px;
     overflow: hidden;
     position: fixed;
-    top: 40px;
+    top: 30px;
     background-color: white;
     opacity: 0.8;
     width: 100%;
@@ -87,7 +88,42 @@ body {
 }
 
 #home {
-    
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.home-wrapper {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 85%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.home-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    width: 80%;
+    padding: 10px;
+}
+
+.home-pic {
+    z-index: 2;
+    background-color: white;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    height: 40%;
+    width: 80%;
 }
 
 #about {
@@ -96,14 +132,52 @@ body {
 
 #contact {
     flex-direction: column;
+    justify-content: flex-end;
+}
+
+#footer {
+    color: white;
+    padding-top: 5px;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    background-color: rgba(50,50,50,0.90);
+    width: 100%;
+    height: 70px;
+    align-items: center;
+}
+
+.address {
+    margin-left: 20px;
+    font-size: 0.5em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+
+.address h5 {
+    margin: 0px;
+}
+
+.address p {
+    margin: 0px;
+}
+
+.contact-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 85%;
 }
 
 .bio {
     border-radius: 5px;
     padding: 10px;
     background-color: white;
-    opacity: 0.8;
     margin: 10px;
     width: 90%;
     display: flex;
@@ -145,11 +219,30 @@ body {
 }
 
 .menu-hide {
-    animation: contract 1s forwards;
+    animation: contract 0.4s forwards;
 }
 
 .menu-show {
-    animation: expand 1s forwards;
+    animation: expand 0.4s forwards;
+}
+
+.fade-in {
+    animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+}
+
 }
 
 @keyframes expand {
@@ -179,3 +272,45 @@ body {
         height: 0em;
     }
 }
+
+@media screen and (min-width:600px) {
+
+    #home {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    .home-wrapper {
+        height: 82%;
+        margin: 20px;
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .home-txt {
+        width: 50%;
+        height: 95%;
+    }
+
+    .home-pic {
+        width: 40%;
+        height: 95%;
+    }
+
+    #menu {
+        top: 40px;
+    }
+
+    #logo {
+        height: 40px;
+    }
+
+    .contact-page-wrapper {
+        align-items: flex-start;
+    }
+
+    .bio {
+        max-width: 70%;
+    }
+} 

@@ -22,4 +22,5 @@ const render = (x) => (x)
 const toggle_menu = pipe(state.get,invert,state.set,render)
 
 touch('menu-button').addEventListener('click',toggle_menu)
+touch('menu').addEventListener('click',toggle_menu)
 
