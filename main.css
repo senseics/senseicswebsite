@@ -4,6 +4,7 @@ html {
 }
 
 body {
+    font-family: sans;
     background-color: rgba(50,50,50,0.92);
     margin: 0px;
     height: 100%;
@@ -23,6 +24,9 @@ body {
 }
 
 #nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     width: 100%;
     z-index: 1;
     position: fixed;
@@ -35,6 +39,31 @@ body {
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
+}
+
+#menu-button {
+    color: white;
+    margin: 20px;
+    font-size: 1.8em;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu {
+    overflow: hidden;
+    position: fixed;
+    top: 40px;
+    background-color: white;
+    opacity: 0.8;
+    width: 100%;
+    height: 0em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 3;
 }
 
 #view {
@@ -51,39 +80,102 @@ body {
 .page {
     margin: 0px;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    align-items: center;
     height: 100vh;
     width: 100%;
     scroll-snap-align: start;
 }
 
-.pic {
-
-}
-
-.page p {
-    margin: 0px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
-    height: 90%;
-    width: 90%;
-    margin-bottom: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: rgba(50,50,50,0.92);
+#home {
+    
 }
 
 #about {
-    justify-content: flex-end;
+
 }
 
-#about p {
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+#contact {
+    flex-direction: column;
+    justify-content: center;
+}
 
+.bio {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    opacity: 0.8;
+    margin: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bio-pic {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 75px;
+    width: 75px;
+    border-radius: 75px;
+}
+
+.bio-wrapper {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-wrapper {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.bio-info {
+    padding: 10px;
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-hide {
+    animation: contract 1s forwards;
+}
+
+.menu-show {
+    animation: expand 1s forwards;
+}
+
+@keyframes expand {
+    0% {
+        height: 0em;
+    }
+
+    30% {
+        height: 0em;
+    }
+
+    100% {
+        height: 2em;
+    }
+}
+
+@keyframes contract {
+    0% {
+        height: 2em;
+    }
+
+    30% {
+        height: 2em;
+    }
+    
+    100% {
+        height: 0em;
+    }
 }
