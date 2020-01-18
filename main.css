@@ -33,6 +33,9 @@ body {
 }
 
 #logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     height: 30px;
     width: 100%;
     background-image: url('assets/senseics_logo.svg');
@@ -43,10 +46,8 @@ body {
 
 #menu-button {
     color: white;
-    margin: 20px;
-    font-size: 1.5em;
-    position: fixed;
-    z-index: 2;
+    margin-right: 20px;
+    font-size: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -191,7 +192,7 @@ body {
     background-position: center;
     background-size: cover;
     height: 75px;
-    width: 75px;
+    min-width: 75px;
     border-radius: 75px;
 }
 
