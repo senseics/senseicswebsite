@@ -91,7 +91,7 @@ h1 {
 }
 
 #home {
-    height: 95vh;
+    min-height: 95vh;
     flex-direction: column;
     justify-content: center;
 }
@@ -130,8 +130,7 @@ h1 {
     background-position: center;
     background-size: cover;
     opacity: 1;
-    height: 40%;
-    min-height: 200px;
+    padding-top: 40%;
     width: 80%;
 }
 
@@ -328,8 +327,7 @@ h1 {
         width: 45%;
     }
     .home-pic {
-        margin: 0px;
-        height: 90%;
+        margin: 20px;
         width: 45%;
     }
     .address a {
