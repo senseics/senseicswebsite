@@ -4,10 +4,11 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: sans;
     background-color: rgba(50,50,50,0.92);
     margin: 0px;
-    height: 100%;
     width: 100%;
 }
 
@@ -28,8 +29,8 @@ body {
     align-items: center;
     justify-content: flex-end;
     width: 100%;
+    height: 5vh;
     z-index: 1;
-    position: fixed;
 }
 
 #logo {
@@ -70,39 +71,36 @@ body {
 
 #view {
     position: absolute;
+    top: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     margin: 0px;
-    scroll-snap-type: y mandatory;
     width: 100%;
 }
 
 .page {
-    margin: 0px;
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
     width: 100%;
-    scroll-snap-align: start;
 }
 
 #home {
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .home-wrapper {
-    margin-bottom: 20px;
     border-radius: 5px;
-    height: 85%;
+    height: 80%;
     width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: white;
+    background-color: rgb(220,220,220);
 }
 
 .home-txt {
@@ -110,12 +108,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 40%;
     width: 80%;
     padding: 10px;
 }
 
+.home-txt span {
+    margin-bottom: 5px;
+    font-size: 1.3em;
+}
+
 .home-pic {
+    margin-bottom: 40px;
     z-index: 2;
     background-color: white;
     border-radius: 10px;
@@ -128,44 +131,47 @@ body {
 }
 
 #about {
+    height: auto;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-evenly;
 }
 
 .about-txt {
     margin-bottom: 20px;
-    border-radius: 5px;
-    height: 70%;
-    width: 85%;
+    height: 90%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: white;
+    background-color: rgb(220,220,220);
     padding: 20px;
 }
 
+.about-txt p {
+    height: 90%;
+}
+
 #contact {
+    height: auto;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 #footer {
+    position: relative;
     color: white;
-    padding-top: 5px;
-    position: absolute;
     bottom: 0px;
+    padding-top: 5px;
     display: flex;
     background-color: rgba(50,50,50,0.90);
     width: 100%;
-    height: 70px;
     align-items: center;
 }
 
 .address {
     margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 0.5em;
-    height: 100%;
+    height: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -186,13 +192,12 @@ body {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 85%;
 }
 
 .bio {
     border-radius: 5px;
     padding: 10px;
-    background-color: white;
+    background-color: rgb(220,220,220);
     margin: 10px;
     width: 90%;
     display: flex;
@@ -226,11 +231,33 @@ body {
 
 .bio-info {
     padding: 10px;
-    font-size: 0.7em;
+    font-size: 0.5em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+#careers {
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.job-post {
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(220,220,220);
+}
+
+.job-post h3,p {
+    margin: 5px;
+}
+
+.job-post p {
+    max-width: 75%;
 }
 
 .menu-hide {
@@ -288,44 +315,3 @@ body {
     }
 }
 
-@media screen and (min-width:600px) {
-
-    #home {
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: flex-start;
-    }
-
-    .home-wrapper {
-        height: 82%;
-        margin: 20px;
-        flex-direction: row;
-        width: 80%;
-    }
-
-    .home-txt {
-        width: 50%;
-        height: 95%;
-    }
-
-    .home-pic {
-        width: 40%;
-        height: 95%;
-    }
-
-    #menu {
-        top: 40px;
-    }
-
-    #logo {
-        height: 40px;
-    }
-
-    .contact-page-wrapper {
-        align-items: flex-start;
-    }
-
-    .bio {
-        max-width: 70%;
-    }
-} 
