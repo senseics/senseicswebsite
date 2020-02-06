@@ -131,6 +131,7 @@ h1 {
     background-size: cover;
     opacity: 1;
     height: 40%;
+    min-height: 200px;
     width: 80%;
 }
 
