@@ -25,6 +25,8 @@ body {
 }
 
 #nav {
+    background-color: white;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: flex-end;
