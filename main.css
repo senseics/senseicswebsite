@@ -25,7 +25,7 @@ body {
 }
 
 #nav {
-    background-color: white;
+    background-color: rgba(160,160,160,0.9);
     position: fixed;
     display: flex;
     align-items: center;
@@ -38,8 +38,8 @@ body {
 #logo {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    height: 30px;
+    justify-content: flex-start;
+    height: 40px;
     width: 100%;
     background-image: url('assets/senseics_logo.svg');
     background-repeat: no-repeat;
@@ -48,7 +48,8 @@ body {
 }
 
 h1 {
-    width: 100%;
+    width: 95%;
+    color: #3317f9;
 }
 
 #menu-button {
@@ -61,23 +62,25 @@ h1 {
 }
 
 #menu {
-    margin-top: 5px;
-    overflow: hidden;
-    position: fixed;
-    top: 30px;
-    background-color: white;
-    opacity: 0.8;
-    width: 100%;
-    height: 0em;
+    z-index: 2;
+    background-color: rgba(160,160,160,0.9);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    z-index: 3;
+    width: 100%;
+    text-decoration: none;
+    color: #3317f9;
+    font-weight: bold;
+    position: fixed;
+    top: 8vh;
+}
+
+#menu a {
+    color: #3317f9;
 }
 
 #view {
     position: absolute;
-    top: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,20 +96,22 @@ h1 {
 }
 
 #home {
-    min-height: 92vh;
+    margin-top: 8vh;
+    height: 92vh;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .home-wrapper {
+    margin-bottom: 20px;
     border-radius: 5px;
-    min-height: 80%;
+    height: 80%;
     width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: rgb(220,220,220);
+    background-color: white;
 }
 
 .home-txt {
@@ -124,15 +129,13 @@ h1 {
 }
 
 .home-pic {
-    margin-bottom: 40px;
-    z-index: 2;
     background-color: white;
     border-radius: 10px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     opacity: 1;
-    padding-top: 40%;
+    padding-top: 35%;
     width: 80%;
 }
 
@@ -144,11 +147,30 @@ h1 {
 }
 
 .about-txt {
-    margin-bottom: 20px;
+    margin-top: 8vh;
     display: flex;
     flex-direction: column;
-    background-color: rgb(220,220,220);
+    background-color: white;
     padding: 20px;
+}
+
+.about-txt section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icon {
+    margin: 20px;
+    height: 100px;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #contact {
@@ -158,6 +180,7 @@ h1 {
 }
 
 #footer {
+    margin-top: 5px;
     position: relative;
     color: white;
     bottom: 0px;
@@ -189,6 +212,7 @@ h1 {
 }
 
 .contact-page-wrapper {
+    margin-top: 8vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -199,7 +223,7 @@ h1 {
 .bio {
     border-radius: 5px;
     padding: 10px;
-    background-color: rgb(220,220,220);
+    background-color: white;
     margin: 10px;
     width: 90%;
     display: flex;
@@ -212,8 +236,8 @@ h1 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 75px;
-    min-width: 75px;
+    height: 100px;
+    min-width: 100px;
     border-radius: 75px;
 }
 
@@ -240,9 +264,10 @@ h1 {
 }
 
 #careers {
+    min-height: 92vh;
     height: auto;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 
 .job-post {
@@ -250,7 +275,7 @@ h1 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: rgb(220,220,220);
+    background-color: white;
 }
 
 .job-post h3,p {
@@ -259,6 +284,10 @@ h1 {
 
 .job-post p {
     max-width: 75%;
+}
+
+.job-post a {
+    margin: 10px 15px;
 }
 
 .menu-hide {
@@ -326,12 +355,27 @@ h1 {
     }
     .home-pic {
         margin: 20px;
-        width: 45%;
+        width: 40%;
     }
     .address a {
         display: none;
     }
     .bio {
         flex-direction: row;
+    }
+    .about-txt section {
+        flex-direction: row;
+    }
+     .home-txt p {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width:1080px) {
+    #menu {
+        background-color: rgba(255,255,255,0);
+        width: 50%;
+        position: relative;
+        top: 0vh;
     }
 }
