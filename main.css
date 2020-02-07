@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'asap';
+    src: url('assets/asap/Asap-Regular.otf');
+}
+
 html {
     height: auto;
     width: 100vw;
@@ -6,7 +11,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    font-family: sans;
+    font-family: 'asap',sans;
     background-color: rgba(100,100,100,0.6);
     margin: 0px;
     width: 100%;
