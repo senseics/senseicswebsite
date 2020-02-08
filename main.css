@@ -57,15 +57,6 @@ h1 {
     color: #3317f9;
 }
 
-#menu-button {
-    color: white;
-    margin-right: 20px;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #menu {
     z-index: 2;
     background-color: rgba(160,160,160,0.9);
